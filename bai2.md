@@ -6,19 +6,6 @@
 + **Trường:** Đại học Kỹ thuật Công nghiệp Thái Nguyên
 ---
 ## BÀI TẬP 2
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### 1. sử dụng nodered: dùng node http_in + http_response => tạo api đơn giản
 
 Chương trình của function:
@@ -50,8 +37,34 @@ msg.payload = {
 return msg;
 ```
 <img width="892" height="853" alt="image" src="https://github.com/user-attachments/assets/45fb05df-54a5-47ef-b96f-72fadeb8cce0" />
-#### 2. cấu hình nginx để web dùng js gọi đc API trên nodered, thuật toán cho api
+<img width="1851" height="884" alt="image" src="https://github.com/user-attachments/assets/dde695eb-f2a7-4dfd-8da9-0bbf96ad8a34" />
 
+#### 2. cấu hình nginx để web dùng js gọi đc API trên nodered, thuật toán cho api
+Cấu hình file nginx/conf.d/web1.conf sử dụng ngôn ngữ Javascript để gọi API trên nodered:
+```
+server {
+    listen 80;
+    server_name web1.phuongkmt.id.vn;
+
+    location / {
+        root /usr/share/nginx/html/site1;
+        index index.html index.htm;
+        try_files $uri $uri/ =404;
+    }
+
+    location /api/ {
+        rewrite ^/api/(.*)$ /$1 break;
+        proxy_pass http://nodered:1880;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
 #### 3. code js vào trang html để gọi đc api trên
 
 ```
