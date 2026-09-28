@@ -1,4 +1,11 @@
-
+# PTƯDTNWEB_DTAP_BT1
+## Thông tin sinh viên:
++ **Họ và tên:** Dương Thị Anh Phương
++ **Mã sinh viên:** K235480106056
++ **Lớp:** K235480106056
++ **Trường:** Đại học Kỹ thuật Công nghiệp Thái Nguyên
+---
+## BÀI TẬP 2
 
 
 
