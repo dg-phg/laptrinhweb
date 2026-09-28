@@ -1,3 +1,15 @@
+
+## Thông tin sinh viên:
++ **Họ và tên:** Dương Thị Anh Phương
++ **Mã sinh viên:** K235480106056
++ **Lớp:** K235480106056
++ **Trường:** Đại học Kỹ thuật Công nghiệp Thái Nguyên
+---
+## BÀI TẬP 1
+
+
+
+
 # BÁO CÁO THỰC HÀNH: TỔNG HỢP CẤU HÌNH HẠ TẦNG WEB MULTI-SITE
 
 Báo cáo chi tiết quá trình khởi tạo môi trường Linux, cài đặt Docker Compose, thiết lập 5 dịch vụ lõi và cấu hình Reverse Proxy Nginx chạy 2 website độc lập qua Cloudflare Tunnel.
