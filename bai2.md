@@ -51,10 +51,7 @@ return msg;
 ```
 <img width="892" height="853" alt="image" src="https://github.com/user-attachments/assets/45fb05df-54a5-47ef-b96f-72fadeb8cce0" />
 #### 2. cấu hình nginx để web dùng js gọi đc API trên nodered, thuật toán cho api
-   ví dụ api trả về json:
-   https://tnut.cuong.id.vn/api/tacke
-   trả về json dạng: 
-   {"ok":1,"msg":"thành công","dssv":[{"name":"Cốp","money":123},{"name":"David","money":456}]}
+
 #### 3. code js vào trang html để gọi đc api trên
 
 ```
